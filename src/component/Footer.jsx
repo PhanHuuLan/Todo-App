@@ -1,4 +1,7 @@
 import React,{memo} from "react";
+import { connect } from "react-redux";
+import { filterByStaus } from "../helpers/todoHelper";
+import { clearCompleted,setStatusFilter } from "../store/action";
 
 const Footer = memo(props => {
   const { status, setStatusFilter, numOfTodos, numOfTodosLeft, clearCompleted } = props;
@@ -55,5 +58,16 @@ const FilterBtn = memo(props => {
     </>
   )
 })
-
-export default Footer;
+const mapStateProps = (state) => {
+  const {todosList,status} = state.todos;
+  return {
+    numOfTodos : todosList.length,
+    numOfTodosLeft : filterByStaus(todosList,'ACTIVE').length,
+    status,
+  }
+}
+const mapDispatchToProps = {
+  clearCompleted,
+  setStatusFilter,
+}
+export default connect (mapStateProps,mapDispatchToProps) (Footer);

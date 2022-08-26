@@ -1,5 +1,8 @@
 import React, {memo} from "react";
 import Todo from "./Todo";
+import { connect } from "react-redux";
+import { checkAllTodos,removeTodo  } from "../store/action";
+import { filterByStaus } from "../helpers/todoHelper";
 
 const TodoList = memo(props => {
   const {todosList, isCheckAll, checkAllTodos} = props;
@@ -21,4 +24,14 @@ const TodoList = memo(props => {
   )
 })
 
-export default TodoList;
+const mapStateToProps = (state) => {
+  return {
+    todosList: filterByStaus(state.todos.todosList,state.todos.status),
+    isCheckAll : state.todos.isCheckAll,
+  }
+}
+const mapDispatchToProps =  {
+  checkAllTodos,
+  removeTodo,
+}
+export default connect(mapStateToProps,mapDispatchToProps) (TodoList );
