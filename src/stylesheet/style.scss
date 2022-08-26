@@ -1,4 +1,3 @@
-@charset "UTF-8";
 body {
   margin: auto;
 }
@@ -39,7 +38,7 @@ body {
   appearance: none;
 }
 
-input[type=checkbox i] {
+input[type="checkbox" i] {
   background-color: initial;
   cursor: default;
   -webkit-appearance: checkbox;
@@ -50,7 +49,7 @@ input[type=checkbox i] {
 }
 
 .todo-list li label {
-  background-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%22-10%20-18%20100%20135%22%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2250%22%20fill%3D%22none%22%20stroke%3D%22%23ededed%22%20stroke-width%3D%223%22/%3E%3C/svg%3E");
+  background-image: url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%22-10%20-18%20100%20135%22%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2250%22%20fill%3D%22none%22%20stroke%3D%22%23ededed%22%20stroke-width%3D%223%22/%3E%3C/svg%3E');
   background-repeat: no-repeat;
   background-position: center left;
   word-break: break-all;
@@ -61,7 +60,7 @@ input[type=checkbox i] {
 }
 
 .todo-list li .toggle:checked + label {
-  background-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%22-10%20-18%20100%20135%22%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2250%22%20fill%3D%22none%22%20stroke%3D%22%23bddad5%22%20stroke-width%3D%223%22/%3E%3Cpath%20fill%3D%22%235dc2af%22%20d%3D%22M72%2025L42%2071%2027%2056l-4%204%2020%2020%2034-52z%22/%3E%3C/svg%3E");
+  background-image: url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%22-10%20-18%20100%20135%22%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2250%22%20fill%3D%22none%22%20stroke%3D%22%23bddad5%22%20stroke-width%3D%223%22/%3E%3Cpath%20fill%3D%22%235dc2af%22%20d%3D%22M72%2025L42%2071%2027%2056l-4%204%2020%2020%2034-52z%22/%3E%3C/svg%3E');
 }
 
 .todo-list li {
@@ -90,7 +89,7 @@ input[type=checkbox i] {
 }
 
 .todo-list li .destroy:after {
-  content: "×";
+  content: '×';
 }
 
 button {
@@ -135,7 +134,7 @@ button {
   padding: 16px 16px 16px 60px;
   border: none;
   background: rgba(0, 0, 0, 0.003);
-  box-shadow: inset 0 -2px 1px rgba(0, 0, 0, 0.03);
+  box-shadow: inset 0 -2px 1px rgba(0,0,0,0.03);
 }
 
 .todoapp h1 {
@@ -174,7 +173,7 @@ button {
 }
 
 .toggle-all + label:before {
-  content: "❯";
+  content: '❯';
   font-size: 22px;
   color: #e6e6e6;
   padding: 10px 27px 10px 27px;
@@ -199,7 +198,7 @@ button {
 }
 
 .footer:before {
-  content: "";
+  content: '';
   position: absolute;
   right: 0;
   bottom: 0;
@@ -234,7 +233,6 @@ button {
 .filters li a.selected {
   border-color: rgba(175, 47, 47, 0.2);
 }
-
 .filters li a {
   color: inherit;
   margin: 3px;
@@ -251,12 +249,10 @@ button {
 .todo-list li.editing:last-child {
   margin-bottom: -1px;
 }
-
 .todo-list li.editing {
   border-bottom: none;
   padding: 0;
 }
-
 .todo-list li.editing .edit {
   display: block;
   width: 90%;
@@ -268,5 +264,3 @@ button {
   color: #d9d9d9;
   text-decoration: line-through;
 }
-
-/*# sourceMappingURL=style.css.map */
